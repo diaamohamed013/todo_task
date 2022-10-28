@@ -25,7 +25,7 @@ registerForm.addEventListener("submit", function (e) {
                         .then(data => {
                             // debugger;
                             localStorage.setItem("user" , data)
-                            // console.table(data)
+                            console.table(data)
                             // debugger;
                             setTimeout(() => {
                                 window.location.assign("index.html");
