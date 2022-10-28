@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Todo | Registration</title>
+    <title>Todo | Register</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
@@ -13,7 +13,6 @@
 
 <body>
     <section>
-        <button class="btn btn-info" onclick="logout()">logout</button>
         <div class="container">
             <div class="row">
                 <div class="col-lg-5 col-md-7 m-auto">
@@ -44,7 +43,7 @@
                             <div class="inpGroup my-3">
                                 <label for="password">Password:</label>
                                 <input type="password" id="password" name="password" placeholder="Enter Password"
-                                    class="form-control" autocomplete= "false" onchange="validatePassword()">
+                                    class="form-control" autocomplete="false" onchange="validatePassword()">
                                 <p class="passError text-danger"></p>
                             </div>
                             <div class="formProcess text-center">
@@ -53,42 +52,38 @@
                             </div>
                         </form>
                     </div> -->
-                    <!-- <div class="registerForm shadow p-4 bg-white">
+                    <div class="registerForm shadow p-4 bg-white">
                         <h2 class="formHead">
                             Registration:
                         </h2>
                         <form action="">
-                            <div class="inpGroup my-3">
-                                <label for="first_name">User Name:</label>
-                                <input type="text" id="first_name" name="first_name" placeholder="Enter your first name"
-                                    class="form-control">
-                                <p class="fNameError text-danger"></p>
-                            </div>
+                            <p class="Error text-danger"></p>
                             <div class="inpGroup my-3">
                                 <label for="email">Email:</label>
-                                <input type="email" id="email" name="email" placeholder="user@example.com"
+                                <input type="email" id="registerEmail" name="email" placeholder="user@example.com"
                                     class="form-control">
-                                <p class="emailError text-danger"></p>
+                                <!-- <p class="emailError text-danger"></p> -->
                             </div>
                             <div class="inpGroup my-3">
                                 <label for="password">Password:</label>
-                                <input type="password" id="password" name="password" placeholder="Enter Password"
+                                <input type="password" id="registerPassword" name="password" placeholder="Enter Password"
                                     class="form-control" autocomplete="false">
                                 <p class="passError text-danger"></p>
                             </div>
                             <div class="formProcess text-center">
                                 <button class="btn btn-info my-3" id="registerBtn">Register</button>
-                                <p>You have an account? <span><a href="login.html">Login</a></span></p>
+                                <p>You don't have an account? <span><a href="register.html">Login</a></span></p>
                             </div>
                         </form>
-                    </div> -->
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/main.js"></script>
+    <!-- <script src="js/main.js"></script> -->
+    <script src="js/login.js"></script>
 </body>
 
 </html>
