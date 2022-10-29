@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Todo | Registration</title>
+    <title>Todo App</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
@@ -13,12 +13,40 @@
 
 <body>
     <section>
-        <button class="btn btn-info" onclick="logout()">logout</button>
+        <div class="logOut my-3 text-end p-2">
+            <button class="btn btn-info" onclick="logout()">logout</button>
+        </div>
         <div class="container">
             <div class="row">
                 <div class="col-lg-5 col-md-7 m-auto">
-                    <h1>Todo App</h1>
-
+                    <p id="taskErr" class="text-danger my-3"></p>
+                    <form action="">
+                        <input type="text" class="form-control" placeholder="Add Task" id="taskInp">
+                        <div class="addTaskBtn text-center">
+                            <button class="btn btn-success my-3" id="registerBtn">Add</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="data">
+            <div class="container overflow-auto">
+                <div class="row">
+                    <div class="col-md-6 m-auto">
+                        <div class="dataContainer">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="data mt-5">
+            <div class="container overflow-auto">
+                <h3 class="h6 d-none">Completed Tasks</h3>
+                <div class="row">
+                    <div class="col-md-6 m-auto">
+                        <div class="dataComplated">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
