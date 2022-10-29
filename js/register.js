@@ -15,7 +15,7 @@ registerForm.addEventListener("submit", function (e) {
     })
         .then(res => res.json())
         .then(data => {
-            debugger;
+            // debugger;
 
             if (data.token) {
                 localStorage.setItem("token", data.token);
