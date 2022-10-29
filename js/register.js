@@ -24,7 +24,7 @@ registerForm.addEventListener("submit", function (e) {
                         .then(res => res.json())
                         .then(data => {
                             // debugger;
-                            localStorage.setItem("user" , data)
+                            localStorage.setItem("user", JSON.stringify(data))
                             console.table(data)
                             // debugger;
                             setTimeout(() => {
