@@ -10,7 +10,7 @@ let taskErr = document.querySelector("#taskErr");
 function isLoged() {
     let token = localStorage.getItem("token");
     if (!token) {
-        window.location.assign("login.html")
+        window.location.assign("register.html")
     }
     else {
         // let user = JSON.parse(localStorage.getItem("user"));
@@ -30,11 +30,17 @@ function logout() {
     window.location.assign("login.html")
 }
 
+if (localStorage.getItem("tasks")){
+    list = JSON.parse(localStorage.getItem("tasks"));
+}
+
+getDataFromLocalStorage();
+
 dataForm.addEventListener("submit", (e) => {
     e.preventDefault();
     if (taskInp.value !== '') {
         taskErr.innerHTML = '';
-        addTaskToArray(taskInp.value);
+        addTask(taskInp.value);
         taskInp.value = '';
     }
     else {
@@ -42,7 +48,7 @@ dataForm.addEventListener("submit", (e) => {
     }
 })
 
-function addTaskToArray(taskTitle) {
+function addTask(taskTitle) {
     const task = {
         userId: user.data.id,
         id: Date.now(),
@@ -51,7 +57,8 @@ function addTaskToArray(taskTitle) {
     }
     list.push(task);
     console.table(task);
-    viewTasks(list)
+    viewTasks(list);
+    saveToLocalStorage(list);
 }
 
 function viewTasks(list) {
@@ -94,4 +101,15 @@ function viewTasks(list) {
     myData.innerHTML = cartona;
 }
 
-// viewTasks()
+function saveToLocalStorage (list){
+    localStorage.setItem("tasks" , JSON.stringify(list));
+}
+
+function getDataFromLocalStorage(){
+    let getData = localStorage.getItem("tasks");
+    if(getData){
+        let tasks = JSON.parse(getData);
+        viewTasks(tasks);
+        // console.log(tasks)
+    }
+}
