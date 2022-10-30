@@ -53,7 +53,7 @@ function addTask(taskTitle) {
         completed: false
     }
     list.push(task);
-    console.table(task);
+    // console.table(task);
     viewTasks(list);
     saveToLocalStorage(list);
 }
