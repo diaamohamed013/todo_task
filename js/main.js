@@ -143,3 +143,17 @@ function updateTask() {
     updateBtn.classList.add("d-none");
     clearForm();
 }
+
+function checkCompleteTask(taskId) {
+    for (let i = 0; i < list.length; i++) {
+        if (list[i].id == taskId) {
+            list[i].completed == false ? list[i].completed = true : list[i].completed = false
+        }
+    }
+    saveToLocalStorage(list);
+    viewTasks(list);
+}
+
+function clearForm() {
+    taskInp.value = "";
+}
