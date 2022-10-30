@@ -39,6 +39,10 @@ $shadowColor: rgba(0, 0, 0, 0.15);
                     display: flex;
                     justify-content: space-evenly;
                     align-items: baseline;
+                    button{
+                        border: 0 !important;
+                        box-shadow: none;
+                    }
                 }
             }
         }
