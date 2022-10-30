@@ -116,3 +116,30 @@ function deleteOneTask(index) {
     viewTasks(list);
 }
 
+let globalId;
+
+function editTask(id) {
+    globalId = id;
+    console.log(globalId)
+    for (let i = 0; i < list.length; i++) {
+        if (list[i].id == id) {
+            taskInp.value = list[i].title;
+            updateBtn.classList.replace("d-none", "d-inline-block");
+            addBtn.classList.add("d-none");
+        }
+    }
+}
+
+function updateTask() {
+    list.forEach((item) => {
+        if (item.id == globalId) {
+            item.title = taskInp.value;
+        }
+    }
+    )
+    saveToLocalStorage(list);
+    viewTasks(list);
+    addBtn.classList.replace("d-none", "d-inline-block");
+    updateBtn.classList.add("d-none");
+    clearForm();
+}
