@@ -18,7 +18,6 @@ function isLoged() {
             .then(res => res.json())
             .then(data => {
                 list = data;
-                console.table(data);
             })
     }
 }
@@ -60,7 +59,6 @@ function addTask(taskTitle) {
 }
 
 function viewTasks(list) {
-    // myData.innerHTML = '';
     let cartona = ``;
     let completedCartona = ``;
     for (let i = 0; i < list.length; i++) {
